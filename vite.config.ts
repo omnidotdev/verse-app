@@ -5,18 +5,16 @@ import tanstackRouter from "@tanstack/router-plugin/vite";
 import react from "@vitejs/plugin-react";
 import mkcert from "vite-plugin-mkcert";
 
-import { isDevEnv } from "./src/lib/config/env.config";
-
 /**
  * Vite configuration.
  * @see https://vite.dev/config
  */
-const viteConfig = defineConfig({
+const viteConfig = defineConfig(({ mode }) => ({
   server: {
     allowedHosts: ["verse.omni.dev"],
   },
   plugins: [
-    isDevEnv && mkcert(),
+    mode === "development" && mkcert(),
     tailwindcss(),
     tsConfigPaths({
       projects: ["./tsconfig.json"],
@@ -27,6 +25,6 @@ const viteConfig = defineConfig({
     }),
     react(),
   ],
-});
+}));
 
 export default viteConfig;
