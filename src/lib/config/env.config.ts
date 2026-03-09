@@ -6,6 +6,7 @@ export const FLAGS_CLIENT_KEY =
 	env.FLAGS_CLIENT_KEY || env.VITE_FLAGS_CLIENT_KEY;
 
 // Environment helpers
+/** @knipignore */
 export const isDevEnv = import.meta.env.DEV;
 /** @knipignore */
 export const isProdEnv = import.meta.env.PROD;
