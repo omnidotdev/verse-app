@@ -1,27 +1,27 @@
-# Dependencies
-/node_modules
+node_modules
 
-# Testing
-/coverage
+# Vite
+.vite
+dist
 
-# Build outputs
-/.next/
-/out/
-/build/
-/dist/
-.vinxi
-.output
+# TanStack
+.tanstack
 
-# Environment & local files
-.env*
-!.env.example
-*.local
+# tests
+coverage
 
-# TypeScript
-*.tsbuildinfo
-next-env.d.ts
-
-dev-dist
-
-# IDE
+# editor
+.vscode
 .zed
+
+# TLS/HTTPS
+certificates
+
+# tooling
+.claude
+
+# environment
+*.env*
+
+# typescript
+tsconfig.tsbuildinfo
