@@ -73,6 +73,12 @@ const omniEcosystemGarden: GardenSchema = {
 					description: "User feedback collection and management",
 					logo: "/img/backfeed-logo.png",
 				},
+				{
+					name: "Runa",
+					homepage_url: "https://runa.omni.dev",
+					description: "Lunar project management and collaboration",
+					logo: "/img/runa-logo.png",
+				},
 			],
 		},
 		{

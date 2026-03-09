@@ -15,6 +15,9 @@ const router = createRouter({
 	routeTree,
 	defaultPreload: "intent",
 	defaultPendingComponent: () => <Loader />,
+	context: {
+		isMaintenanceMode: false,
+	},
 });
 
 const rootElement = document.getElementById("app");
