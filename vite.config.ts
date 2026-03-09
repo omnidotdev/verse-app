@@ -15,21 +15,15 @@ const viteConfig = defineConfig(({ command }) => ({
 		host: "0.0.0.0",
 		allowedHosts: ["verse.omni.dev"],
 	},
-	preview: {
-		port: 3000,
-		host: "0.0.0.0",
-	},
 	plugins: [
 		// NB: command is `serve` in development, `build` in production
 		command === "serve" && mkcert(),
 		tailwindcss(),
 		tsConfigPaths({ projects: ["./tsconfig.json"] }),
-		// NB: skip in preview mode (serve + production) since src/routes isn't in the container
-		(command === "build" || process.env.NODE_ENV !== "production") &&
-			tanstackRouter({
-				target: "react",
-				autoCodeSplitting: true,
-			}),
+		tanstackRouter({
+			target: "react",
+			autoCodeSplitting: true,
+		}),
 		react(),
 	],
 }));

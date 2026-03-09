@@ -11,12 +11,11 @@ COPY . .
 RUN bun run build
 
 # Serve
-FROM base AS runner
+FROM oven/bun:1-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/node_modules ./node_modules
-COPY package.json vite.config.ts tsconfig.json ./
+COPY server.ts ./
 
 EXPOSE 3000
-CMD ["bun", "start"]
+CMD ["bun", "server.ts"]
