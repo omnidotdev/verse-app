@@ -2,10 +2,10 @@
   "name": "@omnidotdev/verse",
   "type": "module",
   "scripts": {
-    "dev": "vite dev --port 3000",
+    "dev": "vite dev",
     "build": "vite build",
     "serve": "vite preview",
-    "start": "vite --host 0.0.0.0",
+    "start": "vite",
     "check": "biome check --diagnostic-level=error src",
     "format": "biome format --write src",
     "lint": "biome lint --diagnostic-level=error src",
