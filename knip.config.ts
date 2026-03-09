@@ -5,10 +5,9 @@ import type { KnipConfig } from "knip";
  * @see https://knip.dev/overview/configuration
  */
 const knipConfig: KnipConfig = {
-	entry: ["src/routes/**/*.{ts,tsx}", "src/main.tsx"],
+	entry: ["src/routes/**/*.{ts,tsx}"],
 	project: ["src/**/*.{ts,tsx,css}"],
 	ignoreExportsUsedInFile: true,
-	ignore: ["src/routeTree.gen.ts"],
 	tags: ["-knipignore"],
 };
 
