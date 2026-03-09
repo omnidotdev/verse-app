@@ -1,18 +1,16 @@
-import { createFlagProvider } from "@omnidotdev/providers";
-
-import { FLAGS_API_HOST, FLAGS_CLIENT_KEY } from "@/lib/config/env.config";
-
-export const flags = createFlagProvider(
-	FLAGS_API_HOST
-		? {
-				provider: "unleash",
-				url: FLAGS_API_HOST,
-				apiKey: FLAGS_CLIENT_KEY!,
-				appName: "verse",
-			}
-		: {},
-);
+export const flags = {
+	async isEnabled(key: string): Promise<boolean> {
+		try {
+			const res = await fetch(`/api/flags/${key}`);
+			if (!res.ok) return false;
+			const data = await res.json();
+			return !!data.enabled;
+		} catch {
+			return false;
+		}
+	},
+};
 
 export const FLAGS = {
-	MAINTENANCE: "verse-maintenance-mode",
+	MAINTENANCE: "maintenance",
 } as const;
