@@ -15,7 +15,8 @@ FROM oven/bun:1-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 COPY --from=builder /app/dist ./dist
-COPY server.ts ./
+COPY --from=builder /app/node_modules ./node_modules
+COPY package.json server.ts ./
 
 EXPOSE 3000
 CMD ["bun", "server.ts"]
