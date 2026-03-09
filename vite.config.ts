@@ -24,10 +24,12 @@ const viteConfig = defineConfig(({ command }) => ({
 		command === "serve" && mkcert(),
 		tailwindcss(),
 		tsConfigPaths({ projects: ["./tsconfig.json"] }),
-		tanstackRouter({
-			target: "react",
-			autoCodeSplitting: true,
-		}),
+		// NB: skip in preview mode (serve + production) since src/routes isn't in the container
+		(command === "build" || process.env.NODE_ENV !== "production") &&
+			tanstackRouter({
+				target: "react",
+				autoCodeSplitting: true,
+			}),
 		react(),
 	],
 }));
