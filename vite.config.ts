@@ -15,6 +15,10 @@ const viteConfig = defineConfig(({ command }) => ({
 		host: "0.0.0.0",
 		allowedHosts: ["verse.omni.dev"],
 	},
+	preview: {
+		port: 3000,
+		host: "0.0.0.0",
+	},
 	plugins: [
 		// NB: command is `serve` in development, `build` in production
 		command === "serve" && mkcert(),

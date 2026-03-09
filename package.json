@@ -5,7 +5,7 @@
     "dev": "vite dev",
     "build": "vite build",
     "serve": "vite preview",
-    "start": "vite",
+    "start": "vite preview",
     "check": "biome check --diagnostic-level=error src",
     "format": "biome format --write src",
     "lint": "biome lint --diagnostic-level=error src",
