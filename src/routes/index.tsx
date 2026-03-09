@@ -111,10 +111,40 @@ const omniEcosystemGarden: GardenSchema = {
 			],
 			sprouts: [
 				{
+					name: "Omni Terminal",
+					homepage_url: "https://terminal.omni.dev",
+					description: "GPU-accelerated terminal emulator",
+				},
+				{
+					name: "Omni CLI",
+					homepage_url: "https://cli.omni.dev",
+					description: "Agentic CLI with TUI and HTTP API",
+				},
+				{
+					name: "Eden",
+					homepage_url: "https://eden.omni.dev",
+					description: "Developer onboarding preflight checks",
+				},
+				{
+					name: "Templates",
+					homepage_url: "https://github.com/omnidotdev/templates",
+					description: "Curated project scaffolding templates",
+				},
+				{
 					name: "Sigil",
 					homepage_url: "https://sigil.omni.dev",
 					description: "Omni design system and component library",
 					logo: "/img/sigil-logo.png",
+				},
+				{
+					name: "Thornberry",
+					homepage_url: "https://github.com/omnidotdev/thornberry",
+					description: "Sigil extension with Tailwind and shadcn",
+				},
+				{
+					name: "Zenpetal",
+					homepage_url: "https://github.com/omnidotdev/zenpetal",
+					description: "Sigil reference implementation in Panda CSS",
 				},
 			],
 		},
@@ -152,6 +182,76 @@ const omniEcosystemGarden: GardenSchema = {
 					homepage_url: "https://garden.omni.dev",
 					description: "Product, service, and other ecosystem visualizer",
 					logo: "/img/logo.png",
+				},
+				{
+					name: "life.json",
+					homepage_url: "https://life.omni.dev",
+					description: "Portable digital identity specification",
+				},
+				{
+					name: "persona.json",
+					homepage_url: "https://persona.omni.dev",
+					description: "Portable non-human identity specification",
+				},
+			],
+		},
+		{
+			name: "Grid",
+			description: "Infrastructure and platform services",
+			icon: "🔷",
+			theme: {
+				primary_color: "#0891B2",
+				secondary_color: "#67E8F9",
+				background_color: "#ECFEFF",
+				text_color: "#164E63",
+			},
+			supergardens: [
+				{
+					name: "Omniverse",
+					url: "https://verse.omni.dev",
+					description: "Complete Omni product and tooling ecosystem",
+				},
+			],
+			sprouts: [
+				{
+					name: "Beacon",
+					homepage_url: "https://beacon.omni.dev",
+					description: "AI companion with voice and messaging",
+				},
+				{
+					name: "Synapse",
+					homepage_url: "https://synapse.omni.dev",
+					description: "AI router for MCP and LLM orchestration",
+				},
+				{
+					name: "Vortex",
+					homepage_url: "https://vortex.omni.dev",
+					description: "Workflow automation for the decentralized web",
+				},
+			],
+		},
+		{
+			name: "Reality",
+			description: "XR, sensors, and spatial computing",
+			icon: "🥽",
+			theme: {
+				primary_color: "#10B981",
+				secondary_color: "#6EE7B7",
+				background_color: "#ECFDF5",
+				text_color: "#064E3B",
+			},
+			supergardens: [
+				{
+					name: "Omniverse",
+					url: "https://verse.omni.dev",
+					description: "Complete Omni product and tooling ecosystem",
+				},
+			],
+			sprouts: [
+				{
+					name: "RDK",
+					homepage_url: "https://github.com/omnidotdev/rdk",
+					description: "React-first XR development kit",
 				},
 			],
 		},
